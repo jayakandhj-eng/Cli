@@ -1,0 +1,23 @@
+{
+    "version": "{{ .Version }}",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Indobase/cli/releases/download/v{{ .Version }}/Indobase_windows_amd64.tar.gz",
+            "bin": [
+                "Indobase.exe"
+            ],
+            "hash": "{{ .Checksum.Indobase_windows_amd64 }}"
+        },
+        "arm64": {
+            "url": "https://github.com/Indobase/cli/releases/download/v{{ .Version }}/Indobase_windows_arm64.tar.gz",
+            "bin": [
+                "Indobase.exe"
+            ],
+            "hash": "{{ .Checksum.Indobase_windows_arm64 }}"
+        }
+    },
+    "homepage": "https://Indobase.com",
+    "license": "MIT",
+    "description": "{{ .Description }}"
+}
+

@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@Indobase/functions-js": "jsr:@Indobase/functions-js@^2"
+  }
+}
+

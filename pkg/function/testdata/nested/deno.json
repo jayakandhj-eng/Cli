@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "module": "jsr:@Indobase/functions-js/edge-runtime.d.ts"
+  }
+}
+
