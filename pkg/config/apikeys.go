@@ -7,18 +7,20 @@ import (
 	"crypto/rsa"
 	"encoding/base64"
 	"math/big"
+	"os"
 	"time"
 
 	"github.com/go-errors/errors"
 	"github.com/golang-jwt/jwt/v5"
 )
 
-const (
-	defaultJwtSecret      = "super-secret-jwt-token-with-at-least-32-characters-long"
-	defaultJwtExpiry      = 1983812996
-	defaultPublishableKey = "sb_publishable_default_key"
-	defaultSecretKey      = "sb_secret_default_key"
+var (
+	defaultJwtSecret      = os.Getenv("SUPABASE_JWT_SECRET")
+	defaultPublishableKey = os.Getenv("SUPABASE_PUBLISHABLE_KEY")
+	defaultSecretKey      = os.Getenv("SUPABASE_SECRET_KEY")
 )
+
+const defaultJwtExpiry = 1983812996
 
 type CustomClaims struct {
 	// Overrides Issuer to maintain json order when marshalling
@@ -209,4 +211,3 @@ func NewBigIntFromBase64(n string) (*big.Int, error) {
 	}
 	return new(big.Int).SetBytes(nBytes), nil
 }
-
