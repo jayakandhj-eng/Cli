@@ -3,7 +3,7 @@ FROM Indobase/postgres:17.6.1.095 AS pg
 # Append to ServiceImages when adding new dependencies below
 FROM library/kong:2.8.1 AS kong
 FROM axllent/mailpit:v1.22.3 AS mailpit
-FROM postgrest/postgrest:v14.5 AS postgrest
+FROM postgrest/postgrest:v14.6 AS postgrest
 FROM Indobase/postgres-meta:v0.96.1 AS pgmeta
 FROM Indobase/studio:2026.03.04-sha-0043607 AS studio
 FROM darthsim/imgproxy:v3.8.0 AS imgproxy
